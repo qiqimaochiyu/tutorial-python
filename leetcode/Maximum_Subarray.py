@@ -13,4 +13,19 @@ class Solution:
             if this_max < 0:
                 this_max = 0
         return max
+    """
+    @param: nums: a list of integers
+    @return: A integer indicate the sum of minimum subarray
+    """
+    def minSubArray(self, nums):
+        # write your code here
+        max = nums[0]
+        this_max = 0
+        for i in nums:
+            this_max += i
+            if this_max < max:
+                max = this_max
+            if this_max > 0:
+                this_max = 0
+        return max
     
