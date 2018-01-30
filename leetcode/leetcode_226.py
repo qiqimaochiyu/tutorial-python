@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
-
+#
 class Solution(object):
     def invertTree(self, root):
         """
