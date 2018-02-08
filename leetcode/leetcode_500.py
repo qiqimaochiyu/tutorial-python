@@ -28,3 +28,21 @@ class Solution:
 A=Solution()
 words=["Hello", "ALaska", "Dad"]
 print(A.findWords(words))
+
+class Solution:
+    def findWords(self, words):
+        """
+        :type words: List[str]
+        :rtype: List[str]
+        """
+        L = []
+        for word in words:
+            w = word.lower()
+            line1 = 'qwertyuiop'
+            line2 = 'asdfghjkl'
+            line3 = 'zxcvbnm'
+            if sum([ i in line1 for i in w])==len(w) or\\
+               sum([ i in line2 for i in w])==len(w) or\\
+               sum([ i in line3 for i in w])==len(w):
+                L.append(word)
+        return L
