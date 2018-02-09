@@ -5,7 +5,7 @@ class Solution:
         :type k: int
         :rtype: int
         """
-        d = {0:1}
+        d = {0:1} # 确保和s本身等于k。
         res, s = 0, 0
         for i in range(len(nums)):
             s += nums[i]
